@@ -1,14 +1,14 @@
 Pod::Spec.new do |s|
   s.name                  = 'Flutter'
-  s.version               = '1.20.300' # 1.20.3
-  s.summary               = 'Flutter Engine Framework'
+  s.version               = '3.3.700' # 3.3.7
+  s.summary               = 'A UI toolkit for beautiful and fast apps.'
   s.description           = <<-DESC
-Flutter is Google’s UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.
+Flutter is Google's UI toolkit for building beautiful, fast apps for mobile, web, desktop, and embedded devices from a single codebase.
 This pod vends the iOS Flutter engine framework. It is compatible with application frameworks created with this version of the engine and tools.
 The pod version matches Flutter version major.minor.(patch * 100) + hotfix.
 DESC
   s.homepage              = 'https://flutter.dev'
-  s.license               = { :type => 'MIT', :text => <<-LICENSE
+  s.license               = { :type => 'BSD', :text => <<-LICENSE
 Copyright 2014 The Flutter Authors. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
@@ -38,11 +38,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 LICENSE
   }
   s.author                = { 'Flutter Dev Team' => 'flutter-dev@googlegroups.com' }
-  s.source                = { :http => 'https://storage.googleapis.com/flutter_infra/flutter/d1bc06f032f9d6c148ea6b96b48261d6f545004f/ios-profile/artifacts.zip' }
+  s.source                = { :http => 'https://storage.googleapis.com/flutter_infra_release/flutter/857bd6b74c5eb56151bfafe91e7fa6a82b6fee25/ios-profile/artifacts.zip' }
   s.documentation_url     = 'https://flutter.dev/docs'
-  s.platform              = :ios, '8.0'
-  s.vendored_frameworks   = 'Flutter.framework'
-  s.prepare_command       = <<-CMD
-unzip Flutter.framework -d Flutter.framework
-CMD
+  s.platform              = :ios, '11.0'
+  s.vendored_frameworks   = 'Flutter.xcframework'
 end
