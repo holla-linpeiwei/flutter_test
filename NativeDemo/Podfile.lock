@@ -1,0 +1,16 @@
+PODS:
+  - Flutter (1.20.300)
+
+DEPENDENCIES:
+  - "Flutter (from `/Users/siri/Desktop/flutter_bridging/混合工程自动化/Flutter/Flutter.podspec`)"
+
+EXTERNAL SOURCES:
+  Flutter:
+    :podspec: "/Users/siri/Desktop/flutter_bridging/混合工程自动化/Flutter/Flutter.podspec"
+
+SPEC CHECKSUMS:
+  Flutter: 301034716928a65bad23090921aeb321a9d55638
+
+PODFILE CHECKSUM: 7ab5d540e562a9416a8f71b66c21413de144e649
+
+COCOAPODS: 1.9.3
