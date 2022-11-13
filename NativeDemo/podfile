@@ -1,6 +1,0 @@
-platform :ios, '9.0'
-  
-target 'NativeDemo' do
-
-pod 'Flutter',:podspec => '/Users/siri/Desktop/flutter_bridging/混合工程自动化/Flutter/Flutter.podspec' 
-end 
