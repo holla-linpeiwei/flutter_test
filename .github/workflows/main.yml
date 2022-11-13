@@ -1,4 +1,4 @@
-name: FlutterCI1 #CI名称
+name: CI #CI名称
 on: [push] #触发条件push操作！
 
 jobs:
@@ -8,14 +8,15 @@ jobs:
     runs-on: macos-latest
     
     steps:
-      - uses: actions/checkout@v1#固定写法
+      #固定写法
+      - uses: actions/checkout@v1
       #三方flutter的Action，它可以在服务器配置一个Flutter环境
       - uses: subosito/flutter-action@v1
         with:
-          flutter-version: '1.1.0'
+          flutter-version: '1.20.3'
           channel: 'stable'
       #想让我们CI做的事情！
-      - run: cd flutter_module && flutter build ios-framework --cocoapods --output=../NativeDemo 
+      - run: cd flutter_module && flutter build ios-framework --cocoapods --output=../framework 
       - run: |
          git add .
          git commit -m 'update flutter framework'
