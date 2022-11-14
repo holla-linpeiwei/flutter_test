@@ -56,7 +56,7 @@ class _HomePageState extends State<HomePage> {
   // 监听原生端主动发送的消息
   void receiveMessage() {
     _messageChannel.setMessageHandler((result) async {
-      print("收到 BasicMessageChannel 消息：" + result.toString());
+      print("收到 BasicMessageChannel 消息2123：" + result.toString());
 
 
 
