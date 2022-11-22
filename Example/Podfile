@@ -1,0 +1,6 @@
+use_frameworks!
+target 'voya_flutter_test_Tests' do
+  pod 'voya_flutter_test', :path => '../'
+  
+  
+end
