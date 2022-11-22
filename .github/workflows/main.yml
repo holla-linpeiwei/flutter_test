@@ -1,27 +1,27 @@
-name: CI #CI名称
-on: [push] #触发条件push操作！
+# name: CI #CI名称
+# on: [push] #触发条件push操作！
 
-jobs:
-  check:
-    name: Test on ${{ matrix.os }}
-    #运行在哪个平台这里是MacOS平台
-    runs-on: macos-latest
+# jobs:
+#   check:
+#     name: Test on ${{ matrix.os }}
+#     #运行在哪个平台这里是MacOS平台
+#     runs-on: macos-latest
     
-    steps:
-      #固定写法
-      - uses: actions/checkout@v1
-      #三方flutter的Action，它可以在服务器配置一个Flutter环境
-      - uses: subosito/flutter-action@v1
-        with:
-          flutter-version: '3.3.7'
-          channel: 'stable'
-      #想让我们CI做的事情！
-      - run: cd flutter_module && flutter build ios-framework --cocoapods --output=../framework 
-      - run: |
-         git add .
-         git commit -m 'update flutter framework 1'
+#     steps:
+#       #固定写法
+#       - uses: actions/checkout@v1
+#       #三方flutter的Action，它可以在服务器配置一个Flutter环境
+#       - uses: subosito/flutter-action@v1
+#         with:
+#           flutter-version: '3.3.7'
+#           channel: 'stable'
+#       #想让我们CI做的事情！
+#       - run: cd flutter_module && flutter build ios-framework --cocoapods --output=../framework 
+#       - run: |
+#          git add .
+#          git commit -m 'update flutter framework 1'
          
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+#       - name: Push changes
+#         uses: ad-m/github-push-action@master
+#         with:
+#           github_token: ${{ secrets.GITHUB_TOKEN }}
